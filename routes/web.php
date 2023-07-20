@@ -30,3 +30,8 @@ Route::get('logout', [AuthController::class, 'logout']);
 Route::get('dashboard', [DashboardController::class, 'index'])->middleware('auth', 'admin');
 Route::get('home', [HomeController::class, 'home'])->middleware('auth', 'peminjam');
 Route::get('books', [BookController::class, 'index']);
+
+
+Route::get('/rama', function () {
+    return view('welcome');
+})->middleware('auth');
