@@ -16,7 +16,7 @@
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Rental Mobil</span></h2>
-              <p class="animate__animated animate__fadeInUp">Jelajahi keindahan kota anda dengan nyaman dan gaya bersama layanan penyewaan mobil kami, karena rumah adalah tempat di mana petualangan dimulai.</p>
+              <p class="animate__animated animate__fadeInUp">Jelajahi keindahan kota anda dengan nyaman dan gaya bersama layanan penyewaan mobil kami, karena rumah adalah tempat di mana petualangan dimulai DITA TRANS.</p>
             </div>
           </div>
         </div>
