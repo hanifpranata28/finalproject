@@ -12,17 +12,13 @@ class KatalogController extends Controller
     {
         $categories = Category::all();
 
-        if ($request->category || $request->nama_mobil) {
-            $katalog = Mobil::where('nama_mobil', 'like', '%' . $request->nama_mobil . '%')
-                ->WhereHas('categories', function ($q) use ($request) {
-                    $q->where(
-                        'categories.id',
-                        $request->category
-                    );
-                })->get();
-        } else {
-            $katalog = Mobil::all();
+        if($request->category || $request->nama_mobil){
+            $katalog = Mobil::where('nama_mobil', 'like','%'.$request->nama_mobil.'%')
+            ->WhereHas('categories', function($q) use($request) {$q->where('categories.id', 
+            $request->category);})->get();
         }
-        return view('katalog', ['katalog' => $katalog, 'categories' => $categories]);
+        else{
+        $katalog = Mobil::all();}
+        return view('katalog', ['katalog'=> $katalog, 'categories'=>$categories]);
     }
 }

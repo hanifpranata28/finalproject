@@ -16,9 +16,11 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('mobil_id');
-            $table->foreign('mobil_id')->references('id')->on('mobil');
+            $table->foreign('mobil_id')->references('id')->on('mobils');
             $table->date('rent_date');
             $table->date('return_date');
+            $table->string('KTP', 255)->nullable();
+            $table->string('SIM', 255)->nullable();
             $table->integer('total')->nullable();
             $table->timestamps();
         });

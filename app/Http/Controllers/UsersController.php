@@ -11,7 +11,7 @@ class UsersController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('users', ['users' => $users]);
+        return view('users', ['users'=>$users]);
     }
 
     public function add()
@@ -26,7 +26,7 @@ class UsersController extends Controller
             'username' => 'required|unique:users|max:255'
         ]);
 
-        $data = [
+        $data =[
             'username' => $request->username,
             'password' => $request->password,
             'phone' => $request->phone,
@@ -46,7 +46,7 @@ class UsersController extends Controller
 
     public function update(Request $request, $slug)
     {
-        $users = User::where('slug', $slug)->first();
+        $users = User::where('slug',$slug)->first();
         $users->slug = null;
         $users->update($request->all());
         return redirect('users')->with('status', 'Users Berhasil Diupdate');

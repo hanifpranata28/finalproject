@@ -36,6 +36,12 @@
   ======================================================== -->
 </head>
 
+<style>
+    .active {
+        background: #1E90FF
+    }
+</style>
+
 <body>
 
     <!-- ======= Header ======= -->
@@ -43,7 +49,7 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo d-flex align-items-center">
-                <span class="d-none d-lg-block">DITA TRANS</span>
+                <span class="d-none d-lg-block">Rental Mobil</span>
             </a>
         </div><!-- End Logo -->
 
@@ -58,14 +64,14 @@
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#"
                         data-bs-toggle="dropdown">
-                        <img src="assets/img/profile-img.png" alt="Profile" class="rounded-circle">
+                        <img src="/assets/img/profile-img.png" alt="Profile" class="rounded-circle">
                         <span class="d-none d-md-block dropdown-toggle ps-2"></span>
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="logout">
+                            <a class="dropdown-item d-flex align-items-center" href="/logout">
                                 <i class="bi bi-box-arrow-right"></i>
                                 <span>Log Out</span>
                             </a>
@@ -85,35 +91,35 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link collapsed " href="dashboard">
+                <a class="nav-link collapsed " href="/dashboard">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="index.html">
+                <a class="nav-link collapsed" href="/users">
                     <i class="bi bi-person-fill"></i>
                     <span>Users</span>
                 </a>
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="index.html">
+                <a class="nav-link collapsed" href="/kategori">
                     <i class="bi bi-list"></i>
                     <span>Kategori</span>
                 </a>
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="index.html">
-                    <i class="bi bi-file-image-fill"></i>
+                <a class="nav-link collapsed" href="/mobil">
+                    <i class="bi bi-book-fill"></i>
                     <span>Katalog</span>
                 </a>
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="index.html">
+                <a class="nav-link collapsed" href="/datarental">
                     <i class="bi bi-car-front-fill"></i>
                     <span>Data Rental</span>
                 </a>
@@ -134,7 +140,7 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>DITA TRANS</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>Rental Mobil</span></strong>. All Rights Reserved
         </div>
     </footer><!-- End Footer -->
 

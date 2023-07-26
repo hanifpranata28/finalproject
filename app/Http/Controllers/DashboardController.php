@@ -16,11 +16,7 @@ class DashboardController extends Controller
         $categoryCount = Category::count();
         $mobilCount = Mobil::count();
         $rentalCount = Rent_log::count();
-        return view('dashboard', [
-            'user_count' => $userCount,
-            'category_count' => $categoryCount,
-            'mobil_count' => $mobilCount,
-            'rent_count' => $rentalCount
-        ]);
+        return view('dashboard', ['user_count' => $userCount, 'category_count' => $categoryCount, 
+        'mobil_count' => $mobilCount, 'rent_count'=> $rentalCount ]);
     }
 }

@@ -11,7 +11,7 @@ class MobilController extends Controller
     public function index()
     {
         $mobils = Mobil::all();
-        return view('mobil', ['mobils' => $mobils]);
+        return view('mobil',['mobils'=>$mobils]);
     }
 
     public function add()
@@ -27,9 +27,9 @@ class MobilController extends Controller
         ]);
 
         $newName = '';
-        if ($request->file('images')) {
+        if($request->file('images')){
             $extension = $request->file('images')->getClientOriginalExtension();
-            $newName = $request->nopol . '-' . now()->timestamp . '.' . $extension;
+            $newName = $request->nopol.'-'.now()->timestamp.'.'.$extension;
             $request->file('images')->storeAs('cover', $newName);
         }
 
@@ -43,23 +43,23 @@ class MobilController extends Controller
     {
         $mobil = Mobil::where('slug', $slug)->first();
         $categories = Category::all();
-        return view('mobil-edit', ['categories' => $categories, 'mobil' => $mobil]);
+        return view('mobil-edit', ['categories' => $categories, 'mobil' =>$mobil]);
     }
 
     public function update(Request $request, $slug)
     {
-        if ($request->file('images')) {
+        if($request->file('images')){
             $extension = $request->file('images')->getClientOriginalExtension();
-            $newName = $request->nopol . '-' . now()->timestamp . '.' . $extension;
+            $newName = $request->nopol.'-'.now()->timestamp.'.'.$extension;
             $request->file('images')->storeAs('cover', $newName);
             $request['cover'] = $newName;
         }
-
-
+    
+        
         $mobil = Mobil::where('slug', $slug)->first();
-        $mobil->update($request->all());
+        $mobil ->update($request->all());
 
-        if ($request->categories) {
+        if($request->categories){
             $mobil->categories()->sync($request->categories);
         }
 

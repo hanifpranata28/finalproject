@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mobil', function (Blueprint $table) {
+        Schema::create('mobil_category', function (Blueprint $table) {
             $table->id();
-            $table->string('nopol');
-            $table->string('nama mobil');
-            $table->integer('harga');
-            $table->string('status')->default('tersedia');
+            $table->unsignedBigInteger('mobil_id');
+            $table->foreign('mobil_id')->references('id')->on('mobils');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('mobil');
+        Schema::dropIfExists('mobil_category');
     }
 };

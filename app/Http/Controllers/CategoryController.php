@@ -10,7 +10,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('kategori', ['categories' => $categories]);
+        return view('kategori', ['categories'=> $categories]);
     }
 
     public function add()
@@ -40,7 +40,7 @@ class CategoryController extends Controller
             'name' => 'required|unique:categories|max:100'
         ]);
 
-        $category = Category::where('slug', $slug)->first();
+        $category = Category::where('slug',$slug)->first();
         $category->slug = null;
         $category->update($request->all());
         return redirect('kategori')->with('status', 'Kategori Berhasil Diupdate');
