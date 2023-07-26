@@ -25,6 +25,16 @@
                 </div>
 
 
+<<<<<<< HEAD
+=======
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(/img/slide/123.png)">
+
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Rental Mobil</span></h2>
+              <p class="animate__animated animate__fadeInUp">Jelajahi keindahan kota anda dengan nyaman dan gaya bersama layanan penyewaan mobil kami, karena rumah adalah tempat di mana petualangan dimulai DITA TRANS.</p>
+>>>>>>> e95d35e67dd348895e80ba9c07a0395f4bb4d837
             </div>
 
             <a href="#heroCarousel" role="button" data-bs-slide="prev">
@@ -36,4 +46,21 @@
             </a>
 
         </div>
+<<<<<<< HEAD
     @endsection
+=======
+
+
+      </div>
+
+      <a  href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span  aria-hidden="true"></span>
+      </a>
+
+      <a  href="#heroCarousel" role="button" data-bs-slide="next">
+        <span  aria-hidden="true"></span>
+      </a>
+
+    </div>
+@endsection
+>>>>>>> e95d35e67dd348895e80ba9c07a0395f4bb4d837
