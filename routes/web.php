@@ -18,7 +18,7 @@ use App\Http\Controllers\BookController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 })->middleware('auth');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');

@@ -30,11 +30,11 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
 
             //$request->session()->regenerate();
-            if(Auth::user()->role_id == 1){
+            if (Auth::user()->role_id == 1) {
                 return redirect('dashboard');
             }
 
-            if(Auth::user()->role_id == 2){
+            if (Auth::user()->role_id == 2) {
                 return redirect('home');
             }
 
@@ -46,13 +46,15 @@ class AuthController extends Controller
 
     public function registerProcess(Request $request)
     {
-        $validated = $request-> validate([
+        $validated = $request->validate([
             'username' => 'required|unique:users|max:255',
             'password' => 'required|max:255',
             'phone' => 'max:255',
             'address' => 'required|max:255',
+            'role_id' => 'required'
         ]);
 
+        // $validated['role_id']='2';
         $user = User::create($request->all());
 
         Session::flash('status', 'success');
@@ -60,11 +62,11 @@ class AuthController extends Controller
         return redirect('register');
     }
 
-    public function logout(Request $request){
+    public function logout(Request $request)
+    {
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('/');
     }
 }
-
