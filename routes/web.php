@@ -58,3 +58,11 @@ Route::post('mobil-edit/{slug}', [MobilController::class, 'update']);
 Route::get('mobil-delete/{slug}', [MobilController::class, 'delete']);
 
 Route::get('datarental', [RentalController::class, 'index']);
+Route::get('rent-edit/{slug}',[RentalController::class,'edit'])->name('rent-edit');
+Route::post('rent-add',[RentalController::class,'store']);
+Route::put('rent-edit/{slug}/{id}',[RentalController::class,'update'])->name('rent-update');
+Route::get('sewa',[RentalController::class,'detail'])->name('detail-car');
+Route::get('/date-range-filter',[RentalController::class,'filter'])->name('filter-rent');
+Route::get('rent-status/{slug}',[RentalController::class,'acc'])->name('acc-rent');
+Route::post('rent-add-multi',[RentalController::class,'add'])->name('rent-add');
+Route::post('rent-multi-add',[RentalController::class,'multirent']);
